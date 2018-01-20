@@ -61,7 +61,20 @@ Code化のメリットだったりしませんか？？
 
 ---
 
-あれ？ルーターのコマンドもコンピューターに命令する手段では？？ |
+あれ？ルーターのコマンドもコンピューターに命令する手段では？？
+
+---
+
+コマンドを並べるだけでも、十分にCodeです
+
+```
+switch# conf t
+switch(config)# int gi 1/1
+switch(interface)# ip add 192.168.0.1 255.255.255.0
+switch(interface)# end
+switch# wr mem
+switch# exit
+```
 
 ---
 
