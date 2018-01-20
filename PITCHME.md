@@ -219,12 +219,13 @@ ssh_connection.expect(r"switch#")
 ssh_connection.sendline("exit")
 
 ssh_connection.close()
-
 ```
 
 @[1](pexpectモジュールをimport)
 @[3](機器にsshセッションを開始)
-@[5](機器のプロンプト出力を待機)
+@[5](機器の文字列出力を待機)
 @[6](文字列を送信)
-@[8-27](待機と文字列送信を繰り返す)
-@[29](sshセッションを終了)
+@[8-28](文字列待機からの文字列送信を繰り返す)
+@[30](sshセッションを終了)
+
+---
