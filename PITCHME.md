@@ -221,4 +221,5 @@ ssh_connection.sendline("exit")
 ssh_connection.close()
 
 ```
-@1[hoge]
+
+@[1](pexpectモジュールをimport)
