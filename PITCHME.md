@@ -63,13 +63,21 @@ Yes.
 コマンドを並べるだけでも、十分にCodeです
 
 ```
+# ssh admin@192.0.2.1
+Password:
+
+switch> ena
+Password:
+
 switch# conf t
 switch(config)# int gi 1/1
-switch(interface)# ip add 192.168.0.1 255.255.255.0
+switch(interface)# ip add 198.51.100.1 255.255.255.0
 switch(interface)# end
 switch# wr mem
 switch# exit
 ```
+
+※本資料では[RFC5737](https://tools.ietf.org/html/rfc5737)で定義された資料用IPアドレスを使用します。
 
 ---
 
@@ -89,29 +97,29 @@ switch# exit
 ---
 
 - 手順書
-  - 【人間】が【手順書】を使って【対象機器】を操作
+  - [人間]が[手順書]を使って[機器]を操作
 
 - Code
-  - 【コンピューター】が【Code】を使って【対象機器】を操作
+  - [コンピューター]が[Code]を使って[機器]を操作
 
 ---
 
 信頼性
 
-コンピューター>対象機器>>>超えられない壁>>>人間
+コンピューター>機器>>>超えられない壁>>>人間
 
 ---
 
 では何を失うのか
 
 - 人間がよしなに作業出来る「遊び」 |
-- 職人「この機器はCPU負荷高めだから、コマンド投入間隔を少し空けよう」 |
+- 職人「CPU負荷高めだから、コマンド投入間隔を少し空けよう」 |
 
 ---
 
 柔軟性
 
-人間>>>超えられない壁>>>コンピューター=対象機器
+人間>>>超えられない壁>>>コンピューター=機器
 
 ---
 
@@ -145,3 +153,72 @@ https://github.com/kaorukit/20180124_janog
 
 ---
 
+今日話すこと
+
+- あなたの仕事をCode化すると何が得られるのか
+  - あるいは何を失うのか
+- **(恐らく)一番原始的なCode化**
+- そして伝説へ...
+
+---
+
+pexpect
+
+- expectのpythonパッケージ |
+- 通常人間が行う対話処理をCodeで行うことが出来る |
+
+---
+
+さっきのコレをCode化してみましょう
+
+```
+# ssh admin@192.0.2.1
+Password:
+
+switch> ena
+Password:
+
+switch# conf t
+switch(config)# int gi 1/1
+switch(interface)# ip add 198.51.100.1 255.255.255.0
+switch(interface)# end
+switch# wr mem
+switch# exit
+```
+
+---
+
+```
+import re
+import pexpect
+
+ssh_connection = pexpect.spawn(ssh admin@192.168.0.1)
+
+ssh_connection.expect(r"Password:")
+ssh_connection.sendline("login_password")
+
+ssh_connection.expect("switch>")
+ssh_connection.sendline("ena")
+
+ssh_connection.expect(r"Password:")
+ssh_connection.sendline("enable_password")
+
+ssh_connection.expect(r"switch#")
+ssh_connection.sendline("conf t")
+
+ssh_connection.expect(r"switch(config)#")
+ssh_connection.sendline("int gi 1/1")
+
+ssh_connection.expect(r"switch(interface)#")
+ssh_connection.sendline("ip add 198.51.100.1 255.255.255.0")
+ssh_connection.sendline("end")
+
+ssh_connection.expect(r"switch#")
+ssh_connection.sendline("wr mem")
+
+ssh_connection.expect(r"switch#")
+ssh_connection.sendline("exit")
+
+ssh_connection.close()
+
+```
