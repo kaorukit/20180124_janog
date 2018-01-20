@@ -1,9 +1,6 @@
 ---
 
-Hello World!
+# まずはCode化だ！
+あるいは
 
----
-
-first slide.
-
----
+@kaorukit
