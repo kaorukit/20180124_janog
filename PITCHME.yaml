@@ -4,10 +4,8 @@
 # For details, visit Wiki:
 # https://github.com/gitpitch/gitpitch/wiki/Slideshow-Settings
 #
-theme : simple
-theme-override : assets/css/PITCHME.css
-highlight : atom-one-light
-logo : assets/image/logo.png
-transition : none
+theme : beige
+transition : fade
 published : true
-footnote : "GitPitch [ White ] Presentation Template"
+slide-number: true
+footnote : "@ 2018 kaorukit"
