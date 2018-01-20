@@ -6,7 +6,9 @@
 ---
 
 自己紹介
+
 @kaorukit
+
 [NetOpsCoding](https://github.com/netops-coding/netops-tips/wiki)
 
 ---
@@ -39,8 +41,10 @@
 ---
 
 *Code化 is 何*
+
 コンピューターに命令する手段
--あれ？ルーターのコマンドもコンピューターに命令する手段では？？-
+
+-あれ？ルーターのコマンドもコンピューターに命令する手段では？？|
 
 ---
 
