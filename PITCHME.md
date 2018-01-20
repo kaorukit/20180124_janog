@@ -230,7 +230,9 @@ ssh_connection.close()
 
 ---
 
-ちょっとダサいけど、直感的に理解出来ますよね・・・？
+ちょっとダサいけど
+
+直感的に理解出来ますよね・・・？
 
 ---
 
@@ -247,7 +249,7 @@ ssh_connection.close()
 
 ---
 
-あなた「ふむ。自分もサクッとCode化始められそうだ。」
+あなた「ふむ。自分もサクッとCode化出来そうだ。」
 
 ---
 
@@ -269,6 +271,6 @@ NetOpsCodingのslackは[こちら](https://docs.google.com/forms/d/1PxKlivU7cpjp
 
 ---
 
-Let's NetOpsCoding!
+みんなで楽しくCode化しましょう！
 
----
+Let's NetOpsCoding!
