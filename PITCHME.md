@@ -189,7 +189,6 @@ switch# exit
 ---
 
 ```
-import re
 import pexpect
 
 ssh_connection = pexpect.spawn(ssh admin@192.168.0.1)
@@ -222,3 +221,4 @@ ssh_connection.sendline("exit")
 ssh_connection.close()
 
 ```
+@1[hoge]
