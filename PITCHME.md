@@ -150,7 +150,7 @@ https://gitpitch.com/kaorukit/20180124_janog
 - テキストベースなので、レビューが楽
   - 変更履歴も追いやすい
   - 画像を入れたら一緒だけど。。。
-- PDFでDownload出来るのでオフラインでもバッチリ
+- PDFでDownload出来るのでOfflineでもバッチリ
   - フォントはいまいち・・・
 
 ---
