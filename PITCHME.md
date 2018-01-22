@@ -53,11 +53,13 @@ Code化のメリットだったりしませんか？？
 ---
 
 普段よく使うスイッチのコマンドも
+
 機器を操作する手段ですよね
 
 ---
 
 ワタシ的には
+
 コマンドを並べるだけでも十分にCode化です
 
 ```
@@ -75,7 +77,9 @@ switch# wr mem
 switch# exit
 ```
 
-※本資料では[RFC5737](https://tools.ietf.org/html/rfc5737)で定義された資料用IPアドレスを使用します。
+※本資料では[RFC5737](https://tools.ietf.org/html/rfc5737)で定義された
+
+資料用IPアドレスを使用します。
 
 ---
 
@@ -121,7 +125,7 @@ switch# exit
 
 ---
 
-Code化 is 正しい
+Code化は常に正しい
 
 とも限らない
 
@@ -131,9 +135,11 @@ Code化 is 正しい
 
 ---
 
-The presentation powered by gitpatch.
+The presentation powered by gitpitch.
 
 https://github.com/kaorukit/20180124_janog
+
+https://gitpitch.com/kaorukit/20180124_janog
 
 ---
 
@@ -242,7 +248,7 @@ ssh_connection.close()
 
 自動化までは難しくても
 
-Code化するだけで得られるメリットがきっとありますよ
+Code化で得られるメリットがきっとありますよ
 
 ---
 
