@@ -288,7 +288,7 @@ NetOpsCodingのslackは[こちら](https://docs.google.com/forms/d/1PxKlivU7cpjp
 
 #beginner でガンガン質問してみましょう！
 
-優しいガチ勢が教えてくれますよ！
+優しい先人たちが教えてくれますよ！
 
 ---
 
